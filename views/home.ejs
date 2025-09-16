@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 10px;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    button:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>The total number of users are: <%= count %></h2>
+
+  <form action="/users/new" method="GET">
+    <button type="submit">Join us today!</button>
+  </form>
+
+  <form action="/users" method="GET">
+    <button type="submit">Check our DataBase.</button>
+  </form>
+</body>
+</html>
